@@ -1,13 +1,17 @@
 'use client';
 
+import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import Header from '../components/layout/Header';
 import Footer from '../components/layout/Footer';
 import VideoBackground from '../components/ui/VideoBackground';
 import ScrollFadeOverlay from '../components/ui/ScrollFadeOverlay';
+import CheckoutModal from '../components/ui/CheckoutModal';
 
 export default function HardwarePage() {
+  const [isCheckoutOpen, setIsCheckoutOpen] = useState(false);
+
   return (
     <>
       <VideoBackground />
@@ -58,14 +62,14 @@ export default function HardwarePage() {
                   MOST POPULAR
                 </div>
                 <h1 className="text-4xl md:text-5xl font-bold text-white mb-2 uppercase tracking-tighter">EMP Hardened Drive</h1>
-                <p className="text-sm font-mono text-white/60 uppercase tracking-widest">Hardware + Software Bundle</p>
+                <p className="text-xl text-white/60 font-medium">Hardware + Software Bundle</p>
               </div>
 
               <div className="flex items-baseline gap-4 border-b border-white/20 pb-8 font-mono">
-                <span className="text-4xl text-white">$237</span>
+                <span className="text-5xl font-bold text-white tracking-tighter">$237</span>
                 <span className="text-xl text-white/40 line-through">$399</span>
-                <span className="ml-auto text-[10px] uppercase tracking-widest text-orange-500 flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 bg-orange-500 animate-pulse"></span>
+                <span className="ml-auto text-xs font-sans text-orange-500 flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 bg-orange-500 rounded-full animate-pulse"></span>
                   8 Left in Batch 1
                 </span>
               </div>
@@ -76,43 +80,46 @@ export default function HardwarePage() {
                 </p>
 
                 <div className="border border-white/20 p-4 bg-black">
-                  <h4 className="text-white font-mono text-xs uppercase tracking-widest mb-2 flex items-center gap-2">
+                  <h4 className="text-white font-bold mb-2 flex items-center gap-2">
                     Ready to Deploy
                   </h4>
-                  <p className="text-xs font-mono text-white/60">
-                    SKIP THE 20+ HOUR DOWNLOAD. PRE-CONFIGURED FOR MACOS, WINDOWS, AND LINUX.
+                  <p className="text-sm text-white/70 leading-relaxed">
+                    Skip the 20+ hour download. Pre-configured for macOS, Windows, and Linux.
                   </p>
                 </div>
 
-                <ul className="space-y-4 font-mono text-xs text-white/90">
+                <ul className="space-y-4 text-sm text-white/90">
                   <li className="flex items-start gap-4">
-                    <span className="text-primary">[01]</span>
+                    <span className="text-primary font-mono text-xs mt-1">[01]</span>
                     <div>
-                      <strong className="text-white block uppercase tracking-wide mb-1">Faraday Shielded Enclosure</strong>
-                      <span className="text-white/50">Protected against electromagnetic pulses and solar flares.</span>
+                      <strong className="text-white block uppercase tracking-wide mb-1 font-bold">Faraday Shielded Enclosure</strong>
+                      <span className="text-white/60 leading-relaxed">Protected against electromagnetic pulses and solar flares.</span>
                     </div>
                   </li>
                   <li className="flex items-start gap-4">
-                    <span className="text-primary">[02]</span>
+                    <span className="text-primary font-mono text-xs mt-1">[02]</span>
                     <div>
-                      <strong className="text-white block uppercase tracking-wide mb-1">Rugged & Durable</strong>
-                      <span className="text-white/50">IP67 Water/Dust resistant. Shockproof up to 2m drops.</span>
+                      <strong className="text-white block uppercase tracking-wide mb-1 font-bold">Rugged & Durable</strong>
+                      <span className="text-white/60 leading-relaxed">IP67 Water/Dust resistant. Shockproof up to 2m drops.</span>
                     </div>
                   </li>
                   <li className="flex items-start gap-4">
-                    <span className="text-primary">[03]</span>
+                    <span className="text-primary font-mono text-xs mt-1">[03]</span>
                     <div>
-                      <strong className="text-white block uppercase tracking-wide mb-1">1TB High-Speed SSD</strong>
-                      <span className="text-white/50">Ultra-fast read/write speeds for instant AI responses.</span>
+                      <strong className="text-white block uppercase tracking-wide mb-1 font-bold">1TB High-Speed SSD</strong>
+                      <span className="text-white/60 leading-relaxed">Ultra-fast read/write speeds for instant AI responses.</span>
                     </div>
                   </li>
                 </ul>
 
-                <button className="w-full py-4 bg-primary text-white hover:bg-primary-hover font-mono font-bold uppercase tracking-widest transition-all">
+                <button 
+                  onClick={() => setIsCheckoutOpen(true)}
+                  className="w-full py-4 bg-primary text-white hover:bg-primary-hover font-bold uppercase tracking-widest transition-all"
+                >
                   Add to Cart — $237
                 </button>
                 
-                <p className="text-center text-[10px] uppercase tracking-widest text-white/40 font-mono">
+                <p className="text-center text-xs text-white/40 uppercase tracking-widest">
                   Free Worldwide Shipping /// Lifetime Hardware Warranty
                 </p>
               </div>
@@ -122,6 +129,14 @@ export default function HardwarePage() {
       </main>
 
       <Footer />
+
+      <CheckoutModal
+        isOpen={isCheckoutOpen}
+        onClose={() => setIsCheckoutOpen(false)}
+        productName="EMP Hardened Drive Bundle"
+        price="$237"
+        priceInCents={23700}
+      />
     </>
   );
 }

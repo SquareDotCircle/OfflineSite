@@ -67,8 +67,8 @@ export default function Hero() {
 
             <div className="mb-4">
               <h3 className="text-xl font-bold text-white mb-2 uppercase tracking-wide">Software Only</h3>
-              <p className="text-white/60 text-xs font-mono mb-4">
-                WINDOWS / MACOS / LINUX / ANDROID
+              <p className="text-white/60 text-sm mb-4">
+                Windows / MacOS / Linux / Android
               </p>
             </div>
             <div className="mb-6 flex-grow border-t border-white/10 pt-4">
@@ -104,11 +104,11 @@ export default function Hero() {
 
             <div className="mt-auto">
               <div className="flex items-baseline gap-3 mb-4 font-mono">
-                <div className="text-3xl text-white">$99</div>
+                <div className="text-4xl font-bold text-white tracking-tighter">$99</div>
                 <div className="text-white/40 text-sm line-through">$149</div>
               </div>
-              <div className="text-[10px] uppercase tracking-widest text-white/50 mb-3">
-                NO MONTHLY FEES. OWN IT FOREVER.
+              <div className="text-xs text-white/50 mb-3 font-medium">
+                No monthly fees. Own it forever.
               </div>
               <Link href="/software" className="block w-full">
                 <button className="w-full py-4 px-6 bg-white/10 hover:bg-white/20 text-white border border-white/20 font-mono text-xs uppercase tracking-widest transition-colors">
@@ -139,7 +139,7 @@ export default function Hero() {
 
             <div className="mb-4">
               <h3 className="text-xl font-bold text-white mb-2 uppercase tracking-wide">EMP Hardened Drive</h3>
-              <p className="text-white/60 text-xs font-mono mb-4">HARDWARE + SOFTWARE BUNDLE</p>
+              <p className="text-white/60 text-sm mb-4">Hardware + Software Bundle</p>
             </div>
             <div className="mb-8 flex-grow border-t border-white/10 pt-4">
               <ul className="space-y-3 text-sm text-white/80">
@@ -163,19 +163,19 @@ export default function Hero() {
             </div>
             <div className="mt-auto">
               <div className="flex items-baseline gap-3 mb-4 font-mono">
-                <div className="text-3xl text-white">$237</div>
+                <div className="text-4xl font-bold text-white tracking-tighter">$237</div>
                 <div className="text-white/40 text-sm line-through">$399</div>
               </div>
-              <div className="text-[10px] uppercase tracking-widest text-white/50 mb-3">
-                SAVE 40+ HOURS SETUP. PLUG & PLAY.
+              <div className="text-xs text-white/50 mb-3 font-medium">
+                Save 40+ hours of setup. Plug & Play.
               </div>
               <Link href="/hardware" className="block w-full">
                 <button className="w-full py-4 px-6 bg-primary text-white hover:bg-primary-hover font-mono text-xs uppercase tracking-widest transition-colors shadow-[0_0_15px_rgba(255,71,29,0.4)]">
                   Order Hardened Drive
                 </button>
               </Link>
-              <div className="mt-3 text-center text-[10px] uppercase tracking-widest text-white/40 font-mono">
-                <span className="text-primary">///</span> 8 UNITS REMAINING (BATCH 1)
+              <div className="mt-3 text-center text-xs text-white/40">
+                <span className="text-primary">●</span> <span className="text-white/80 font-medium">8 left in Batch 1</span>
               </div>
             </div>
           </div>
