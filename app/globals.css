@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #0e0e0e;
+  --color-foreground: #ffffff;
+  --color-primary: #ff471d;
+  --color-primary-hover: #ff633f;
+  --color-primary-dark: #ed300b;
+  --color-dark: #0e0e0e;
+  --color-dark-lighter: #1a1a1a;
+  --color-dark-border: rgba(255, 255, 255, 0.1);
+  
+  --font-family-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  
+  --animate-fade-in: fadeIn 0.5s ease-in;
+  --animate-fade-out: fadeOut 0.5s ease-out;
+  --animate-slide-in-right: slideInRight 0.3s ease-out;
+  --animate-slide-out-right: slideOutRight 0.3s ease-out;
+  --animate-glow: glow 8s ease-in-out infinite alternate;
+  
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  @keyframes fadeOut {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+  }
+  
+  @keyframes slideInRight {
+    0% { transform: translateX(100%); opacity: 0; }
+    100% { transform: translateX(0); opacity: 1; }
+  }
+  
+  @keyframes slideOutRight {
+    0% { transform: translateX(0); opacity: 1; }
+    100% { transform: translateX(100%); opacity: 0; }
+  }
+  
+  @keyframes glow {
+    0% { opacity: 0.3; filter: brightness(0.8); }
+    100% { opacity: 0.6; filter: brightness(1.2); }
+  }
+}
+
+* {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+body {
+  background-color: #0e0e0e;
+  color: #ffffff;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Header navigation collapse animation */
+.group:hover .transition-all {
+  transition-delay: 0s;
+}
