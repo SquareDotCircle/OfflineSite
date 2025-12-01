@@ -12,7 +12,7 @@ export default function Hero() {
   ];
 
   return (
-    <section className="min-h-screen relative pt-24 md:pt-32 pb-16 px-4 md:px-10">
+    <section className="min-h-screen relative pt-24 md:pt-32 pb-16 px-4 md:px-10 overflow-x-hidden w-full">
       <div className="w-full relative z-0">
         {/* Title Section */}
         <div className="flex items-start gap-8 md:gap-20 mb-8 max-w-[80%] mx-auto md:ml-4">
