@@ -56,7 +56,7 @@ export default function Header() {
             <div
               className={cn(
                 'hidden lg:grid justify-items-end transition-all duration-400 group relative ml-auto',
-                isScrolled && 'bg-white/5 rounded-lg'
+                isScrolled && 'bg-white/5 rounded'
               )}
             >
               <div
