@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server';
 import Stripe from 'stripe';
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY || '', {
-  apiVersion: '2025-01-27.acacia', // Latest stable version or fallback
+  apiVersion: '2024-12-18.acacia' as any, // Bypass TS check for specific version string
 });
 
 export async function POST(request: Request) {

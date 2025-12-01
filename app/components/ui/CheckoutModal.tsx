@@ -127,18 +127,7 @@ function PaymentForm({ price, priceInCents, onSuccess, onBack }: { price: string
             </div>
           )}
 
-          <PaymentElement 
-            options={{
-              theme: 'night',
-              variables: {
-                colorPrimary: '#ff471d',
-                colorBackground: '#1a1a1a',
-                colorText: '#ffffff',
-                colorDanger: '#ef4444',
-                fontFamily: 'Inter, sans-serif',
-              }
-            }}
-          />
+          <PaymentElement />
         </div>
       </div>
 
@@ -294,7 +283,23 @@ export default function CheckoutModal({ isOpen, onClose, productName, price, pri
 
         {/* Step 2: Payment (Real Stripe Integration) */}
         {step === 'payment' && clientSecret && stripePromise && (
-          <Elements stripe={stripePromise} options={{ clientSecret, appearance: { theme: 'night', labels: 'floating' } }}>
+          <Elements 
+            stripe={stripePromise} 
+            options={{ 
+              clientSecret, 
+              appearance: { 
+                theme: 'night', 
+                labels: 'floating',
+                variables: {
+                  colorPrimary: '#ff471d',
+                  colorBackground: '#1a1a1a',
+                  colorText: '#ffffff',
+                  colorDanger: '#ef4444',
+                  fontFamily: 'Inter, sans-serif',
+                }
+              } 
+            }}
+          >
             <PaymentForm 
                 price={price} 
                 priceInCents={priceInCents}
