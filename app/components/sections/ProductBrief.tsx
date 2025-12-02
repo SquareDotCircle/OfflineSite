@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export default function ProductBrief() {
   return (
-    <section className="mt-[100vh] bg-black text-white relative z-10 hidden md:block">
+    <section className="mt-[100vh] bg-black text-white relative z-10 hidden">
       <div className="demo-section py-10 px-8 relative">
         <div className="container max-w-full mx-auto">
           <div className="max-w-[80%] ml-4">
