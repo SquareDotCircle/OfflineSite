@@ -6,7 +6,8 @@ export default function VideoBackground() {
       {/* Star background video (full screen, fixed) */}
       <video
         id="star-bg"
-        className="fixed top-0 left-0 w-full h-screen object-cover -z-10 opacity-100 transition-opacity duration-100"
+        className="fixed top-0 left-0 w-full h-full object-cover -z-10 opacity-100 transition-opacity duration-100 pointer-events-none"
+        style={{ width: '100vw', height: '100vh', maxWidth: '100%' }}
         autoPlay
         muted
         loop

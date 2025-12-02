@@ -27,7 +27,11 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       </head>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <div className="relative w-full max-w-[100vw] overflow-x-hidden min-h-screen">
+          {children}
+        </div>
+      </body>
     </html>
   );
 }

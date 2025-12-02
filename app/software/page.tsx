@@ -27,10 +27,10 @@ export default function SoftwarePage() {
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
-            {/* Left: Product Visuals */}
-            <div className="space-y-6 sticky top-32">
-              <div className="relative w-full aspect-[4/3] border border-white/20 bg-black">
+          <div className="flex flex-col md:grid md:grid-cols-2 gap-12 items-start">
+            {/* Left: Product Visuals - Static on mobile, sticky on desktop */}
+            <div className="w-full space-y-6">
+              <div className="relative w-full aspect-[4/3] bg-transparent">
                 <Image
                   src="/images/offline_software_2.png"
                   alt="Offline Software Interface"
@@ -38,16 +38,16 @@ export default function SoftwarePage() {
                   className="object-contain p-4"
                 />
               </div>
-              <div className="grid grid-cols-3 gap-0 border border-white/20">
-                <div className="p-4 text-center border-r border-white/20 bg-black">
+              <div className="grid grid-cols-3 gap-0 border border-white/20 bg-transparent">
+                <div className="p-4 text-center border-r border-white/20 bg-transparent">
                   <div className="text-xs font-mono font-bold text-primary mb-2">AI</div>
                   <div className="text-[10px] uppercase tracking-widest text-white/60 font-mono">LOCAL MODEL</div>
                 </div>
-                <div className="p-4 text-center border-r border-white/20 bg-black">
+                <div className="p-4 text-center border-r border-white/20 bg-transparent">
                   <div className="text-xs font-mono font-bold text-primary mb-2">MAPS</div>
                   <div className="text-[10px] uppercase tracking-widest text-white/60 font-mono">GLOBAL DATA</div>
                 </div>
-                <div className="p-4 text-center bg-black">
+                <div className="p-4 text-center bg-transparent">
                   <div className="text-xs font-mono font-bold text-primary mb-2">WIKI</div>
                   <div className="text-[10px] uppercase tracking-widest text-white/60 font-mono">LIBRARY</div>
                 </div>

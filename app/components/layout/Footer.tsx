@@ -12,7 +12,7 @@ export default function Footer() {
               <Link href="/" className="text-2xl font-bold tracking-tight mb-2">
                 OFFLINE
               </Link>
-              <nav className="flex gap-8 mt-4">
+              <nav className="flex flex-wrap gap-4 md:gap-8 mt-4">
                 <Link href="#home" className="text-gray-500 text-sm uppercase tracking-wider hover:text-white transition-colors">
                   Home
                 </Link>

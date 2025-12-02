@@ -14,7 +14,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       <button
         ref={ref}
         className={cn(
-          'relative overflow-hidden z-10 px-4 py-2 font-medium transition-all duration-300',
+          'relative overflow-hidden z-10 px-4 py-2 font-medium transition-all duration-300 rounded-sm',
           'before:content-[""] before:absolute before:top-0 before:left-[-100%] before:bottom-[100%] before:w-full before:h-full before:z-[-1]',
           'before:transition-transform before:duration-300 before:ease-[cubic-bezier(0.75,0,0.125,1)]',
           'after:content-[""] after:absolute after:top-0 after:left-[-100%] after:bottom-[100%] after:w-full after:h-full after:z-[-1]',

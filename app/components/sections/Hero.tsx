@@ -16,9 +16,9 @@ export default function Hero() {
       <div className="w-full relative z-0">
         {/* Title Section */}
         <div className="flex items-start gap-8 md:gap-20 mb-8 max-w-[80%] mx-auto md:ml-4">
-          <h1 className="text-3xl md:text-[2.5rem] font-medium tracking-[-2px] uppercase relative mb-5 w-max leading-[100%]">
+          <h1 className="text-3xl md:text-[2.5rem] font-medium tracking-[-2px] uppercase relative mb-5 flex items-start gap-1 leading-[100%]">
             OFFLINE
-            <span className="absolute -top-2 md:-top-4 -right-8 md:-right-14 text-xl md:text-[1.8rem] text-gray-500 tracking-tight">
+            <span className="text-xl md:text-[1.8rem] text-gray-500 tracking-tight -mt-2 md:-mt-4">
               (.IO)
             </span>
           </h1>

@@ -27,28 +27,28 @@ export default function HardwarePage() {
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
-            {/* Left: Product Visuals */}
-            <div className="space-y-6 sticky top-32">
-              <div className="relative w-full aspect-[4/3] border border-white/20 bg-transparent">
+          <div className="flex flex-col md:grid md:grid-cols-2 gap-12 items-start">
+            {/* Left: Product Visuals - Static on mobile, sticky on desktop */}
+            <div className="w-full space-y-6">
+              <div className="relative w-full aspect-[4/3] bg-transparent">
                 <Image
                   src="/images/offline_hardware_design.png"
                   alt="EMP Hardened Drive"
                   fill
-                  className="object-contain p-4 hover:scale-105 transition-transform duration-500"
+                  className="object-contain p-4"
                 />
               </div>
               
-              <div className="grid grid-cols-3 gap-0 border border-white/20">
-                <div className="p-4 text-center border-r border-white/20 bg-black">
+              <div className="grid grid-cols-3 gap-0 border border-white/20 bg-transparent">
+                <div className="p-4 text-center border-r border-white/20 bg-transparent">
                   <div className="text-xs font-mono font-bold text-primary mb-2">EMP</div>
                   <div className="text-[10px] uppercase tracking-widest text-white/60 font-mono">SHIELDED</div>
                 </div>
-                <div className="p-4 text-center border-r border-white/20 bg-black">
+                <div className="p-4 text-center border-r border-white/20 bg-transparent">
                   <div className="text-xs font-mono font-bold text-primary mb-2">USB-C</div>
                   <div className="text-[10px] uppercase tracking-widest text-white/60 font-mono">HIGH SPEED</div>
                 </div>
-                <div className="p-4 text-center bg-black">
+                <div className="p-4 text-center bg-transparent">
                   <div className="text-xs font-mono font-bold text-primary mb-2">IP67</div>
                   <div className="text-[10px] uppercase tracking-widest text-white/60 font-mono">WATERPROOF</div>
                 </div>

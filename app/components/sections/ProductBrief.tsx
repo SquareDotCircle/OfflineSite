@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export default function ProductBrief() {
   return (
-    <section className="mt-[100vh] bg-black text-white relative z-10">
+    <section className="mt-[100vh] bg-black text-white relative z-10 hidden md:block">
       <div className="demo-section py-10 px-8 relative">
         <div className="container max-w-full mx-auto">
           <div className="max-w-[80%] ml-4">
@@ -16,7 +16,7 @@ export default function ProductBrief() {
               complete access to the world&apos;s knowledge without internet dependency.
             </p>
 
-            <ul className="flex items-center gap-2 mb-6">
+            <ul className="flex flex-wrap items-center gap-2 mb-6">
               <li className="text-white text-sm font-medium border border-white px-3 py-2 whitespace-nowrap">
                 ACCESS
               </li>

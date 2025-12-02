@@ -3,7 +3,30 @@ import Stripe from 'stripe';
 
 export async function POST(request: Request) {
   try {
+    // Security: Verify origin (prevent CSRF)
+    const origin = request.headers.get('origin');
+    const allowedOrigins = [
+      'http://localhost:3000',
+      'https://go-offline.ai',
+      'https://offline.netlify.app', // Replace with your actual Netlify domain
+    ];
+    
+    if (origin && !allowedOrigins.includes(origin)) {
+      return NextResponse.json(
+        { error: 'Unauthorized origin' },
+        { status: 403 }
+      );
+    }
+
     const { amount } = await request.json();
+
+    // Validate amount (prevent manipulation)
+    if (!amount || amount < 50 || amount > 1000000) {
+      return NextResponse.json(
+        { error: 'Invalid amount' },
+        { status: 400 }
+      );
+    }
 
     if (!process.env.STRIPE_SECRET_KEY) {
       return NextResponse.json(
@@ -26,8 +49,9 @@ export async function POST(request: Request) {
 
     return NextResponse.json({ clientSecret: paymentIntent.client_secret });
   } catch (error: any) {
+    console.error('Payment Intent creation error:', error);
     return NextResponse.json(
-      { error: error.message },
+      { error: 'Payment processing error' },
       { status: 500 }
     );
   }

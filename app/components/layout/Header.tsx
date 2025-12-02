@@ -63,22 +63,22 @@ export default function Header() {
                 className={cn(
                   'flex items-center gap-7 px-3 py-2 transition-all duration-400 overflow-hidden relative z-10',
                   isScrolled ? 'max-w-[4rem] group-hover:max-w-[45rem]' : 'max-w-[45rem]'
-                )}
-              >
-                {navLinks.map((link) => (
-                  <Link
-                    key={link.href}
-                    href={link.href}
+              )}
+            >
+              {navLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
                     className={cn(
                       'text-white/70 text-sm tracking-tight hover:text-white transition-all duration-400 whitespace-nowrap',
                       isScrolled && 'opacity-0 translate-x-8 group-hover:opacity-100 group-hover:translate-x-0'
                     )}
-                  >
-                    {link.label}
-                  </Link>
-                ))}
+                >
+                  {link.label}
+                </Link>
+              ))}
               </div>
-              
+
               {/* Toggle Lines (visible when scrolled) */}
               {isScrolled && (
                 <div className="absolute right-5 top-1/2 -translate-y-1/2 w-10 h-10 flex items-center justify-center pointer-events-none group-hover:opacity-0 transition-opacity duration-400 z-0">
