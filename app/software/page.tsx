@@ -75,14 +75,17 @@ export default function SoftwarePage() {
                   Transform your existing hardware into a sovereign intelligence hub. Download the complete offline suite, including our proprietary local LLM, global mapping system, and the entire curated library designed to give your offline AI real data to make inferences from.
                 </p>
 
-                <div className="border border-orange-500/30 p-4 bg-black">
-                  <h4 className="text-orange-500 font-bold mb-3 flex items-center gap-2">
-                    System Requirements
+                <div className="border border-orange-500/20 p-4 bg-orange-500/10 rounded-sm">
+                  <h4 className="text-orange-200 font-semibold mb-3 flex items-center gap-2">
+                    <span className="text-lg">⚠️</span> System Requirements
                   </h4>
-                  <ul className="text-sm text-white/70 space-y-1 font-mono text-xs">
-                    <li>REQ: ~1TB FREE SPACE</li>
-                    <li>REQ: 8GB RAM MINIMUM</li>
-                    <li>OS: WINDOWS / MACOS / LINUX</li>
+                  <p className="text-white/70 mb-3 leading-relaxed text-xs">
+                    This is a massive offline database. Please check your device meets these requirements before purchasing.
+                  </p>
+                  <ul className="text-sm text-white/60 space-y-1.5 list-disc list-inside">
+                    <li><span className="text-white/90 font-medium">~1TB</span> free storage required</li>
+                    <li><span className="text-white/90 font-medium">8GB RAM</span> minimum (16GB recommended)</li>
+                    <li>Compatible with <span className="text-white/90 font-medium">Windows, macOS, or Linux</span></li>
                   </ul>
                 </div>
 

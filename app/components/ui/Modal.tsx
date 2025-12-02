@@ -52,10 +52,23 @@ export default function Modal({ isOpen, onClose, children, className }: ModalPro
         {/* Close Button */}
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 w-[30px] h-[30px] cursor-pointer group"
+          className="absolute top-6 right-6 w-8 h-8 flex items-center justify-center cursor-pointer group hover:bg-white/10 rounded transition-colors"
           aria-label="Close"
         >
-          <span className="relative block w-full h-[2px] bg-white before:content-[''] before:absolute before:w-full before:h-[2px] before:bg-white before:rotate-45 after:content-[''] after:absolute after:w-full after:h-[2px] after:bg-white after:-rotate-45 group-hover:opacity-80 transition-opacity" />
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            className="text-white group-hover:text-white/70"
+          >
+            <line x1="18" y1="6" x2="6" y2="18" />
+            <line x1="6" y1="6" x2="18" y2="18" />
+          </svg>
         </button>
 
         {children}
